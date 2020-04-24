@@ -1,0 +1,31 @@
+.new-task {
+    padding: 2rem;
+
+    &__paragraph {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    form {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        input {
+            width: 80%;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            color: $gray;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 2rem;
+            padding: 0.5rem;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
