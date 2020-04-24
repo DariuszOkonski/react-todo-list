@@ -1,3 +1,20 @@
-body {
-    background-color: red;
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,143,255,1) 0%, rgba(207,240,255,1) 100%, rgba(9,121,118,1) 100%);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
