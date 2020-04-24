@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header.jsx';
 import SingleTask from './components/SingleTask.jsx';
 import SingleTaskEdit from './components/SingleTaskEdit.jsx';
+import NewTask from './components/NewTask.jsx';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <SingleTask/>  
         <SingleTaskEdit/>  
       </ul>  
+
+      <NewTask/>
     </div>
   );
 }
