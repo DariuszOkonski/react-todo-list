@@ -7,7 +7,7 @@ const NewTask = () => {
             <form>
                 <input type="text" placeholder="Add New Task..."/>
                 <button>
-                    <i class="fas fa-plus"></i>
+                    <i className="fas fa-plus"></i>
                 </button>
             </form>
         </section>
