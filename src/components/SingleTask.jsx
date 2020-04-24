@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ToDoContext } from '../contexts/ToDoContext';
 
-const SingleTask = () => {
+const SingleTask = ({id, task}) => {
+    const {toggleIsEdit} = useContext(ToDoContext)
+
     return (  
         <li className="single-task">
-            <p className="single-task__paragraph">Go fetch some milk</p>
+            <p className="single-task__paragraph">{task}</p>
 
             <div>
-                <button>
+                <button onClick={() => toggleIsEdit(id)}>
                     <i className="fas fa-pen-fancy"></i>
                 </button>
                 <button>
