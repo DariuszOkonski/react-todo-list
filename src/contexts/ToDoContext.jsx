@@ -15,14 +15,7 @@ const ToDoContextProvider = (props) => {
     }
 
     const editTask = (id, newTask) => {
-        const currentTask = {id: id, task: newTask, isEdit: false};
-
-        setTasks(tasks.map(task => {
-            if(task.id === id)
-                return currentTask;
-            else
-                return task            
-        }));
+        setTasks(tasks.map(task => (task.id === id) ? {id: id, task: newTask, isEdit: false} :  task ));
     }
 
     const removeTask = (id) => {
@@ -30,14 +23,7 @@ const ToDoContextProvider = (props) => {
     }
 
     const toggleIsEdit = (id) => {
-        let newTasks = tasks.map(task => {
-            if(task.id === id)
-                return {...task, isEdit: true};
-            else
-                return task
-        });
-
-        setTasks(newTasks);
+        setTasks(tasks.map(task => (task.id === id) ? {...task, isEdit: true} : task));
     }
 
     return (  
