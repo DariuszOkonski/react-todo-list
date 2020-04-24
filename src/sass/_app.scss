@@ -4,6 +4,10 @@
     background-color: $red;
     box-shadow: 20px 20px 0px 0px rgba(0,0,0,0.1);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     @media(min-width: $small) {
         width: 340px;
     }
