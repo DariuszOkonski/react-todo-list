@@ -1,0 +1,14 @@
+.app {
+    width: 300px;
+    min-height: 500px;
+    background-color: $red;
+    box-shadow: 20px 20px 0px 0px rgba(0,0,0,0.1);
+
+    @media(min-width: $small) {
+        width: 340px;
+    }
+
+    @media(min-width: $medium) {
+        width: 450px;
+    }
+}
