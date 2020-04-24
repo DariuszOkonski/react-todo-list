@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,AAAC,CACD,gBAAgB,CAAE,KAAK,CAC1B",
+    "mappings": "ACAA,AAAA,IAAI,AAAC,CACD,gBAAgB,CAAE,GAAG,CACxB",
     "sources": [
-        "../sass/index.scss"
+        "../sass/index.scss",
+        "../sass/_reset.scss"
     ],
     "names": [],
     "file": "index.css"
