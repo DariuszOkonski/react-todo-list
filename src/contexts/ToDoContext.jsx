@@ -14,8 +14,30 @@ const ToDoContextProvider = (props) => {
         setTasks([...tasks, {id: uuidv4(), task: newTask, isEdit: false}]);
     }
 
+    const editTask = (id, newTask) => {
+        const currentTask = {id: id, task: newTask, isEdit: false};
+
+        setTasks(tasks.map(task => {
+            if(task.id === id)
+                return currentTask;
+            else
+                return task            
+        }));
+    }
+
+    const toggleIsEdit = (id) => {
+        let newTasks = tasks.map(task => {
+            if(task.id === id)
+                return {...task, isEdit: true};
+            else
+                return task
+        });
+
+        setTasks(newTasks);
+    }
+
     return (  
-        <ToDoContext.Provider value={{tasks, addTask}}>
+        <ToDoContext.Provider value={{tasks, addTask, editTask, toggleIsEdit}}>
             {props.children}
         </ToDoContext.Provider>
     );
