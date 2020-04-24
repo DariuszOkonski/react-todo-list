@@ -25,6 +25,10 @@ const ToDoContextProvider = (props) => {
         }));
     }
 
+    const removeTask = (id) => {
+        setTasks(tasks.filter(task => task.id !== id));
+    }
+
     const toggleIsEdit = (id) => {
         let newTasks = tasks.map(task => {
             if(task.id === id)
@@ -37,7 +41,7 @@ const ToDoContextProvider = (props) => {
     }
 
     return (  
-        <ToDoContext.Provider value={{tasks, addTask, editTask, toggleIsEdit}}>
+        <ToDoContext.Provider value={{tasks, addTask, editTask, toggleIsEdit, removeTask}}>
             {props.children}
         </ToDoContext.Provider>
     );
