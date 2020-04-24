@@ -1,0 +1,23 @@
+.single-task {
+    margin: 0.2rem 0;
+    padding: 0.5rem 2rem;
+    background: lighten($color: $red, $amount: 5%);
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        background-color: transparent;
+        border: none;
+
+        i {
+            color: $white;
+            font-size: 1.4rem;
+            padding: 0.2rem;
+            margin: 0.2rem;
+            cursor: pointer;
+        }
+    }
+}
